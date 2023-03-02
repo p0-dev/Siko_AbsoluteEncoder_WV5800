@@ -1,0 +1,17 @@
+; R:\software\CAN\TX\siko\siko wv5800m.xmt
+;   CAN messages saved by PCAN-View v5.0.2.838
+;
+; Columns descriptions:
+; ~~~~~~~~~~~~~~~~~~~~~
+; +Message ID
+; |            +Cycle time in ms (0=manual)
+; |            |  +Data length
+; |            |  |  +Frame type
+; |            |  |  |  +Message data
+; |            |  |  |  |
+601h           0  4  D 40h 0Ah 5Fh 02h ; Baudrate Get
+601h           0  5  D 2Fh 0Ah 5Fh 01h 0Dh ; NodeID Set
+601h           0  5  D 2Fh 0Ah 5Fh 02h 04h ; Baudrate Set
+601h           0  6  D 2Bh 17h 10h 00h F4h 01h ; Heartbeat Set
+601h           0  8  D 23h 10h 10h 01h 73h 61h 76h 65h ; Save conf
+60Dh           0  4  D 40h 0Ah 5Fh 01h ; NodeID Get

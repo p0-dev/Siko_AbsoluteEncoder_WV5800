@@ -1,5 +1,5 @@
-; R:\software\CAN\TX\siko\siko wv5800m.xmt
-;   CAN messages saved by PCAN-View v5.0.2.838
+; E:\work\Encoder_Siko5800\pjt_pcan\siko_wv5800m.xmt
+; CAN messages saved by PCAN-View 4.1.3
 ;
 ; Columns descriptions:
 ; ~~~~~~~~~~~~~~~~~~~~~
@@ -9,9 +9,17 @@
 ; |            |  |  +Frame type
 ; |            |  |  |  +Message data
 ; |            |  |  |  |
-601h           0  4  D 40h 0Ah 5Fh 02h ; Baudrate Get
-601h           0  5  D 2Fh 0Ah 5Fh 01h 0Dh ; NodeID Set
-601h           0  5  D 2Fh 0Ah 5Fh 02h 04h ; Baudrate Set
-601h           0  6  D 2Bh 17h 10h 00h F4h 01h ; Heartbeat Set
-601h           0  8  D 23h 10h 10h 01h 73h 61h 76h 65h ; Save conf
-60Dh           0  4  D 40h 0Ah 5Fh 01h ; NodeID Get
+000h           0  8  D 01h 00h 00h 00h 00h 00h 00h 00h ; NMT: Start
+080h         100  1  D 00h  Paused ; NMT: Sync
+601h           0  4  D 40h 0Ah 5Fh 02h ; Get: Baudrate
+601h           0  6  D 2Bh 00h 62h 00h 32h 00h ; Set: PDO1 timer: 50ms
+601h           0  6  D 2Bh 17h 10h 00h FAh 00h ; Set: Heartbeat: 250ms
+60Ah           0  5  D 2Fh 0Ah 5Fh 01h 0Fh ; Set: Node ID: 15
+60Ah           0  5  D 2Fh 0Ah 5Fh 02h 05h ; Set: Baudrate: 500kbps
+60Ah           0  8  D 23h 03h 60h 00h 00h 00h 20h 00h ; Set: Preset value: 2097152
+60Ah           0  8  D 23h 03h 60h 00h 04h 00h 00h 00h ; Set: Preset value: 262144
+60Bh           0  8  D 23h 10h 10h 01h 73h 61h 76h 65h ; SDO: Save
+60Bh           0  8  D 2Bh 00h 60h 00h 04h 00h 00h 00h ; Set: Shaft rotation: CW
+60Dh           0  8  D 40h 00h 60h 00h 00h 00h 00h 00h ; Get: Shaft rotation: CW
+60Eh           0  5  D 2Fh 0Ah 5Fh 02h 04h ; Set: Baudrate: 250kbps
+60Eh           0  8  D 2Fh 02h 20h 00h 01h 00h 00h 00h ; SDO: Zeroing
